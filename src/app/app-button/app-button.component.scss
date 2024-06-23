@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+
+:host {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+
+    &.success:hover {
+        background-color: $success;
+    }
+
+    &.warning:hover {
+        background-color: $warning;
+    }
+
+    &.danger:hover {
+        background-color: $danger;
+    }
+
+
+}
