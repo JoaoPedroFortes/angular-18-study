@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../../styles.scss';
 
 :host {
     border: 1px solid;
@@ -6,6 +6,7 @@
     padding: 10px;
     cursor: pointer;
     background-color: white;
+    font-weight: bold;
 
     &.success:hover {
         background-color: $success;

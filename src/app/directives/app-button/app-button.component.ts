@@ -11,7 +11,7 @@ type FactoryKey = 'success' | 'warning' | 'danger';
     '[class.warning]': 'warning',
     '[class.danger]': 'danger',
   },
-  template: ` <ng-content/>
+  template: `<ng-content/>
   `,
   styleUrl: './app-button.component.scss'
 })

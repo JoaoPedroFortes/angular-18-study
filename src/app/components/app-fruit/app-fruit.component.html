@@ -1,0 +1,10 @@
+<form #form="ngForm">
+    <!--app-label-required controls a '*'' symbol to show that this field is required -->
+    <label app-label-required for="name" [labelFor]="name">Name:</label>
+    <input #name="ngModel" name="name" autocomplete="none" type="text" [(ngModel)]="object.name" required />
+
+    <label app-label-required [labelFor]="qtd" for="qtd">Quantity:</label>
+    <input #qtd="ngModel" name="qtd" type="number" [(ngModel)]="object.quantity" required />
+
+    <button app-button type="submit" accent="success" [disabled]="!form.valid" (click)="addFruit()">+</button>
+</form>

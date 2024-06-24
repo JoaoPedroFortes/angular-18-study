@@ -1,7 +1,41 @@
-<h1>Hi there. This is a angular v18project created for study </h1>
+<h1>Hi there. This is a angular v18 project created for study </h1>
 
 <h2>#button directive</h2>
 <div class="btn-area">
-  <button app-button type="button" accent="warning" (click)="onConfirm()">Cancel</button>
+  <button app-button type="button" accent="warning" (click)="onCancel()">Cancel</button>
   <button app-button type="button" accent="success" (click)="onConfirm()">Confirm</button>
 </div>
+
+
+<h2># if else (Use the buttons upside to control)</h2>
+
+<ng-container>
+
+  <ng-template #templateOK>
+    <p>it's ok</p>
+  </ng-template>
+
+  <ng-template #templateNotOK>
+    <p>it's not ok</p>
+  </ng-template>
+
+
+  @if(isConfirmed){
+  <ng-container [ngTemplateOutlet]="templateOK"></ng-container>
+  }@else {
+  <ng-container [ngTemplateOutlet]="templateNotOK"></ng-container>
+  }
+
+</ng-container>
+
+<h2># Foreach</h2>
+
+<ng-container>
+  <h3>Fruit list</h3>
+  <app-fruit (onAddFruit)="addFruit($event)"></app-fruit>
+
+  @for (fruit of fruitList; track fruit.name ; let index = $index) {
+    <p>{{fruit.name}} - {{fruit.quantity}} <button app-button type="button" accent="warning" id="btnAddFruit{{index}}" (click)="removeFruit(index)">X</button></p> 
+  }
+
+</ng-container>

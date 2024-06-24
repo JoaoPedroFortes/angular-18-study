@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+
+:host {
+   
+    .required{
+        color: red;
+        font-weight: bold;
+    }
+}
